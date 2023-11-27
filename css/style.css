@@ -1,0 +1,580 @@
+
+body{
+    
+}
+img{
+    border-radius: 60px;
+    height: auto;
+
+}
+.about_us_photo{
+    max-width: 100%;
+}
+.container{
+    max-width: 1140px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+h3{
+    font-size: 22px;
+}
+.mobile_about_me{
+    display: none;
+}
+.about_us_photo img{
+    max-width: 100%;
+    height: auto;
+}
+.language{
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.language.selected{
+    border-bottom: 1px solid #FFF;
+}
+/* Button Style */
+.but{
+    border-radius: 60px;
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    border:  none;
+}
+.white{
+    background: #FFF;
+}
+.white:hover{
+    background: #957979;
+    transition: 300ms ease-in-out;
+    color: #FFF;
+}
+.dark{
+    background: #957979;
+    color: #FFF
+}
+.dark:hover{
+    background: #e8b8b8;
+    transition: 300ms ease-in-out;
+    color: #957979;
+}
+.active-menu{
+    position: fixed;
+}
+.plus,
+.minus {
+    transition: opacity 0.3s ease; /* Добавляем анимацию изменения прозрачности */
+    cursor: pointer; /* Добавляем стиль курсора для указания на возможность клика */
+}
+.minus {
+   display: none; /* Начальное значение прозрачности для минуса, чтобы он был скрытым при загрузке страницы */
+}
+
+
+
+
+
+
+/* Header Style */
+.background{
+    background-image: url('../img/Mask-group.png');
+    background-size: cover;
+    text-align: center;
+}
+header{
+    color: #FFF;
+    margin-bottom: 110px;
+}
+.header_top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 277px;
+}
+.logo_name{
+    font-weight: 500;
+}
+.logo_name, .lang_change{
+    font-size: 18px;
+}
+
+.nav_list {
+    display: flex;
+    list-style: none;
+    gap: 66px;
+}
+.nav_list a{
+    text-decoration: none;
+    color: #FFF;
+    transition: 300ms ease-in-out;
+}
+.nav_list a:hover{
+    color: #957979;
+}
+.overlay{
+    display: none;
+    position: fixed; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(19, 18, 18); /* Полупрозрачный серый фон */
+    z-index: 1;
+}
+.lang_change{
+    display: flex;
+    gap: 16px;
+}
+.header_content{
+    text-align: center;
+    padding-bottom: 123px;
+}
+.header_content h1{
+    font-family: Cormorant Garamond;
+    font-size: 58px;
+}
+.header_content p{
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Burger Menu */
+.bar{
+
+}
+.bar:nth-child(1).close {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.bar:nth-child(2).close {
+    opacity: 0;
+}
+
+.bar:nth-child(3).close {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+/* Mobile for Header */
+@media only screen and (max-width: 1050px){
+    .container{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    /* Menu Burger */
+    .menu_toggle{
+        display: block;
+        margin-top: 15px;
+        z-index: 2;
+    }
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: #fff;
+        transition: 0.4s;
+    }
+    .bar.close {
+        height: 4px;
+        margin: 5px 0;
+    }
+    .overlay.active {
+        display: block;
+    }
+    .menu {
+        opacity: 0;
+        position: fixed;
+        top: 65px;
+        left: -100%;
+        font-size: 30px;
+        z-index: 2;
+        transition: opacity 1s ease-in-out, left 1s ease-in-out;
+    }
+    .menu.active {
+        display: flex;
+        opacity: 1;
+        left: 0;
+    }
+    .nav_list {
+        gap: 90px;   
+    }
+    .nav_list a {
+        transition: transform 0.5s ease-in-out;
+    }
+    .menu.active .nav_list a {
+        transform: translateX(0);
+    }
+    .menu.active .nav_list a:nth-child(1) {
+        transition-delay: 0.2s;
+    }
+    .menu.active .nav_list a:nth-child(2) {
+        transition-delay: 0.4s;
+    }
+    
+    .menu.active .nav_list a:nth-child(3) {
+        transition-delay: 0.6s;
+    }
+    
+    .menu.active .nav_list a:nth-child(4) {
+        transition-delay: 0.8s;
+    }
+    
+    /* End Menu  Burger */
+
+    .lang_change {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        transition: opacity 1s ease-in-out, right  1200ms ease-in-out;
+    }
+    .lang_change.active{
+        color: #858080;
+        opacity: 1;
+        visibility: visible;
+        right: 60%;
+        z-index: 4;
+    }
+    
+    .header_content h1{
+        font-size: 38px;
+    }
+    .header_content p{
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 700px){
+    /* Menu Mobile */
+    .nav_list{
+        flex-direction: column;
+        gap: 40px
+    }
+    .menu.active {
+        left: 12%;
+    }
+}
+
+
+
+
+/* Main Style */
+h2{
+    font-size: 40px;
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 120.023%; /* 21.604px */
+}
+.about_us{
+   margin-bottom: 200px;
+}
+.about_us_photo{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 35px;
+    gap: 20px;
+}
+.about_us_photo img{
+    flex: 0 0 auto;
+   border-radius: 60px;
+   transition: transform 0.5s ease-in-out;
+}
+.swith {
+    text-align: center;
+}
+
+.advantages h2{
+    margin-bottom: 40px;
+}
+.advantages_item{
+    display: flex;
+    text-align: center;
+    gap: 100px;
+    margin-bottom: 200px;
+}
+
+/* Media About us and Advantages */
+@media only screen and (max-width: 1050px){
+    .advantages_item{
+        flex-wrap: wrap;
+    } 
+    .advantages_item h3{
+        font-size: 22px;
+    }
+    .advantages_item p{
+        text-align: center;
+    }
+}
+
+
+.why_us_item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 160px;
+}
+.why_us_item_list{
+    flex: 0 0 49%; /* Каждый элемент занимает 50% ширины */
+    box-sizing: border-box; /* Учитываем padding и border в ширине элемента */
+    padding: 40px 30px 40px 65px; 
+    border: 1px solid #957979;
+    border-radius: 60px;
+}
+.why_us_item_list p {
+    text-align: left;
+}
+
+/* Why us Media Style */
+@media only screen and (max-width: 1050px){
+    .why_us_item{
+        text-align: center;
+    }
+    .why_us_item_list{
+        flex: 0 0 100%;
+        padding: 40px 20px 40px 20px;
+    }
+    .why_us_item_list p {
+        text-align: center;
+    }
+}
+/* Why us Media Style End */
+
+
+.about_me_item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 120px;
+}
+.about_me_item .my_photo{
+    margin-right: 107px;
+} 
+.about_me_item .description h2, p{
+    text-align: left;
+}
+/* About Me Mobile Style*/
+@media only screen and (max-width: 1050px){
+    .mobile_about_me_item img{
+        max-width: 100%;
+    }
+    .about_me{
+        display: none;
+    }
+    .mobile_about_me{
+        display: block;
+        margin-bottom: 120px;
+    }
+    .read_my_story{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .expanded .plus {
+        display: none; /* Прячем плюс, когда элемент раскрыт */
+    }
+    .expanded .minus {
+        display: block; /* Показываем минус, когда элемент раскрыт */
+    }
+    .mobile_description p{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease-in-out;
+    }
+    .mobile_description.expanded p{
+        max-height: 1000px;
+    }
+}
+/* About Me Mobile Style*/
+
+
+.certificate{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+.certificate h2{
+    text-align: left;
+}
+.certificate_photo {
+    display: flex;
+}
+/* Certeficate Mobile Style */
+@media only screen and (max-width: 1050px){
+    .certificate{
+        flex-direction: column; /* Изменяем направление флекс-контейнера обратно на горизонтальное */
+        overflow: hidden; /* Скрываем остальные картинки, которые не помещаются в контейнер */
+    }
+}   .certificate_photo img{
+        max-width: 100%; /* Делаем так, чтобы изображения занимали максимальную ширину контейнера */
+        flex: 0 0 auto; /* Отменяем порядок изображений */
+        object-fit: cover;
+        margin-right: 30px;
+        margin-bottom: 30px;
+}
+    .certificate .swith{
+        text-align: center;
+    }
+/* Certeficate Mobile Style End*/
+
+
+.price_item{
+    margin-bottom: 200px
+}
+.price_item button{
+    margin: 0 auto;
+  display: block;
+}
+.price_item p{
+    text-align: center;
+}
+.price_time{
+    max-width: 657px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.price_time p{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    border: 1px solid #7A7A7A;
+    border-radius: 60px;
+}
+
+.question{
+    margin-bottom: 100px;
+}
+.question_item {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   border-bottom: 1px solid #5B5B5B;
+}
+.answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+.minus{
+    display: none;
+}
+.expanded .answer {
+    max-height: 500px; /* Установите высоту, достаточную для вашего содержимого */
+    transition: max-height 0.3s ease-in-out;
+}
+.question_item.expanded .plus {
+    display: none; /* Прячем плюс, когда элемент раскрыт */
+}
+.question_item.expanded .minus {
+    display: block; /* Показываем минус, когда элемент раскрыт */
+}
+/* Question Media Style*/
+@media only screen and (max-width: 1050px){
+    .question_item {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+/* Question Media Style end*/
+
+
+.questions_for_me{
+    margin-bottom: 200px;
+}
+.form{
+    margin-bottom: 40px;
+}
+.underline-input {
+    border: none;
+    border-bottom: 1px solid #000; /* Цвет линии подчеркивания и её толщина */
+    outline: none; /* Убираем стандартное подчеркивание при фокусе */
+    width: 100%;
+    padding: 6px
+}
+/* Дополнительные стили при фокусе, чтобы подчеркивание выглядело активным */
+.underline-input:focus {
+    border-bottom: 2px solid #000; /* Цвет и толщина линии при фокусе */
+}
+
+/*Questions_for_me Media Style*/
+@media only screen and (max-width: 1050px){
+.questions_for_me .my_photo{
+    display: none;
+    }
+}
+/*Questions_for_me Media Style End*/
+
+
+
+/* Footer Style */
+
+.footer_info {
+    position: relative;
+    background-image: url('../img/Rectangle\ 63.png');
+    background-size: cover; /* Растягиваем фон на всю ширину и высоту */
+    background-position: center; /* Центрируем фон */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    height: 619px;
+    max-width: 100%;
+    /* padding: 60px 150px 60px 920px; */
+}
+
+.contacts {
+    position: absolute;
+    top: 60px;
+    right: 150px;
+    border-radius: 60px;
+    border: 1px solid #4E4E4E;
+    background: #FFF8F8;
+    padding: 40px 100px 40px 60px;
+}
+.footer_bottom{
+    display: flex;
+    justify-content: space-between;
+}
+/* Footer Media Style */
+@media only screen and (max-width: 1050px){
+   .footer_info{
+    margin-bottom: 379px;
+    top: 379px;
+   }
+   .contacts{
+    top: -528px;
+    right: auto;
+   }
+   .footer_down{
+    background: #4B4B4B;
+   }
+   .footer_bottom{
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 73px;
+    padding-bottom: 73px;
+   }
+   .footer_bottom p{
+    text-align: center;
+    color: #FFF;
+   }
+}
+/* Footer Media Style End*/
+
+
+
+/* Total Mobile Style */
+@media only screen and (max-width: 430px){
+  h2{
+    font-size: 36px;
+  }
+  .plus, .minus{
+    width: 10%;
+  }
+  .nav_list{
+    flex-direction: column;
+    gap: 40px
+  }
+  .menu.active {
+    left: 0;
+  }
+}

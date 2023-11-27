@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background">
+        <header class="container">
+            <div class="header_top">
+                <div class="logo_name">
+                    <p>Epil Studio</p>
+                </div>
+                
+                <div class="menu_toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <div class="overlay"></div>
+                <div class="menu">
+                    <ul class="nav_list">
+                        <li><a onclick="scrollToSection('section1')">О нас</a></li>
+                        <li><a onclick="scrollToSection('section2')">Почему мы</a></li>
+                        <li><a onclick="scrollToSection('section3')">Прайс</a></li>
+                        <li><a onclick="scrollToSection('section4')">Контакты</a></li>
+                    </ul>
+                </div>
+                                                                
+                <div class="lang_change">
+                    <p class="language" onmouseover="addBorder(this)" onmouseout="removeBorder(this)" onclick="selectLanguage(this)">PL</p>
+                    <p class="language" onmouseover="addBorder(this)" onmouseout="removeBorder(this)" onclick="selectLanguage(this)">RU</p>
+                    <p class="language" onmouseover="addBorder(this)" onmouseout="removeBorder(this)" onclick="selectLanguage(this)">UA</p>
+                </div>
+            </div>
+
+            <div class="header_content">
+                <h1>Студия электроэпиляции Epil</h1>
+                <p>Избавим от нежелательных волос НАВСЕГДА</p>
+                <button class="but white">Записаться</button>
+            </div>
+        </header>
+    </div>
+
+    <main class="container">
+        <div class="about_us" id="section1">
+            <h2>О нас</h2>
+            <p>Наша студия специализируется только на электроэпиляции, тем самым гарантируем качественное и 
+                эффективное предоставление услуг. Мы используем самое лучшее оборудование в мире – Apilus (Канада), проверенное временем и специалистами. Выбрав нашу студию, вы точно не пожалеете</p>
+            <div class="about_us_photo">
+                <img src="img/Photo (22).png">
+                <img src="img/Photo (38).png">
+                <img src="img/Photo (5).png">
+            </div>
+       
+            <div сlass="swith" style="text-align: center;">
+                <img src="img/Group 129.svg" onclick="rotatePhotos('right')">
+                <img src="img/Group 120.svg" onclick="rotatePhotos('left')">
+            </div> 
+       </div>
+
+
+        <div class="advantages">
+
+            <h2>В чем преимущества электроэпиляции?</h2>
+            <div class="advantages_item">
+                <div class="advantages_item_list">
+                    <img src="img/Group 123.png">
+                    <h3>Безопасно</h3>
+                    <p>За 140 лет истории существования электроэпиляции не выявили никаких угроз здоровью</p>
+                </div>
+                <div class="advantages_item_list">
+                    <img src="img/Group 122.png">
+                    <h3>Навсегда</h3>
+                    <p>По результатам клинических исследований электроэпиляция является единственным методом удаления волос НАВСЕГДА</p>
+                </div>
+                <div class="advantages_item_list">
+                    <img src="img/Group 15.png">
+                    <h3>Эффективно</h3>
+                    <p>Метод применим и одинаково эффективен ДЛЯ ЛЮБОЙ ЗОНЫ, любого цвета волос, любого 
+                        типа кожи</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="why_us" id="section2">
+            <h2>Почему вам стоит выбрать нашу студию?</h2>
+            <div class="why_us_item">
+                <div class="why_us_item_list">
+                    <h3>Узкая направленность</h3>
+                    <p>Мы специализируемся только на электроэпиляции, тем самым гарантируем качественное предоставление услуг</p>
+                </div>
+                <div class="why_us_item_list">
+                    <h3>Квалифицированные специалисты</h3>
+                    <p>В нашей студии работают только квалифицированные мастера с опытом работы, знающие свое дело</p>
+                </div>
+                <div class="why_us_item_list">
+                    <h3>Качественное оборудование</h3>
+                    <p>В студии представлено самое лучшее оборудование 
+                        в мире – Apilus (Канада), проверенное 
+                        временем и специалистами</p>
+                </div>
+                <div class="why_us_item_list">
+                    <h3>Одноразовые материалы</h3>
+                    <p>Все расходные материала используются только одноразовые. Безопасность и здоровье клиента 
+                        на первом месте</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about_me">
+            <div class="about_me_item">
+                <div class="my_photo">
+                   <img src="img/Photo (16).png">
+                </div>
+                <div class="description">
+                    <h2>Обо мне</h2>
+                    <p>Меня зовут Юлия Алексеева - я являюсь практикующим мастером электроэпиляции и основатель студии Epil.
+                        Мой путь как мастера депиляции начался с желания избавится от нежелательных волос навсегда. Как только я опробовала метод электроэпиляция на себе, увидела первые результаты и убедилась в том, что это эффективно и безопасно, появилась идея открыть студию электроэпиляции в моем родном городе.
+                        Теперь все, что связано с нежелательными волосами на любом участке вашего тела - это ко мне. Гладкость вашей коже обеспечена. Пройдя курс электроэпиляции , вы влюбитесь в эту процедуру не меньше меня.</p>
+                </div>
+            </div>
+        </div>
+
+            <div class="mobile_about_me">
+                    <div class="mobile_about_me_item">
+                        <h2>Обо мне</h2>
+                        <p class="short_text">Меня зовут Юлия Алексеева - я являюсь практикующим мастером электроэпиляции и основатель студии Epil.</p>
+                        <div class="my_photo">
+                            <img src="img/Photo (16).png">
+                        </div>   
+                        <div class="read_my_story">
+                            <p class="read_more_button" onclick="toggleText()">Читать мою историю</p><img class="plus" src="img/Group 25.svg"><img class="minus" src="img/Minus 25.svg">
+                        </div>
+                        <div class="mobile_description">
+                            <div сlass="full_text"><p id="hiddenText">Меня зовут Юлия Алексеева - я являюсь практикующим мастером электроэпиляции и основатель студии Epil.
+                                Мой путь как мастера депиляции начался с желания избавится от нежелательных волос навсегда. Как только я опробовала метод электроэпиляция на себе, увидела первые результаты и убедилась в том, что это эффективно и безопасно, появилась идея открыть студию электроэпиляции в моем родном городе.
+                                Теперь все, что связано с нежелательными волосами на любом участке вашего тела - это ко мне. Гладкость вашей коже обеспечена. Пройдя курс электроэпиляции , вы влюбитесь в эту процедуру не меньше меня.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+        <div class="my_certificate">
+            <div class="certificate">
+                <h2>Мои сертификаты</h2>
+                <div class="certificate_photo">
+                  <img src="img/2022-09-20 20.02.png" id="certificateGallery">
+                  <img src="img/2022-09-20 20.03 (1).png">
+                  <img src="img/2022-09-20 20.03.png">
+                </div>
+                <div сlass="swith" style="text-align: center;">
+                    <img src="img/Group 129.svg" onclick="rotatePhotos1('right')">
+                    <img src="img/Group 120.svg" onclick="rotatePhotos1('left')">
+                </div>
+            </div>
+        </div>
+
+        <div class="price" id="section3">
+
+           <div class="price_item">
+              <h2>Прайс</h2>
+              <p>При работе менее 30 мин фиксированная оплата 130 зл</p>
+
+              <div class="price_list">
+                 <div class="price_time">
+                    <p>30 мин<span class="price_money">130 зл</span></p>
+                    <p>60 мин<span class="price_money">200 зл</span></p>
+                    <p>5 часов<span class="price_money">900 зл</span></p>
+                    <p>1 часов<span class="price_money">1700 зл</span></p>
+                    <p>Одноразовая игла<span class="price_money">15 зл</span></p>
+                 </div>
+                 <button class="but dark">Записаться</button>
+              </div>
+           </div>
+
+        </div>
+
+        <div class="question">
+            <h2>Часто задаваемые вопросы</h2>
+            <div class="question_list">
+
+                <div class="question_item">
+                    <p>Что такое Электроэпиляция?</p>
+                    <img class="plus" src="img/Group 25.svg">
+                    <img class="minus" src="img/Minus 25.svg">
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+                <div class="question_item">
+                    <p>Сколько необходимо процедур?</p>
+                    <img class="plus" src="img/Group 25.svg">
+                    <img class="minus" src="img/Minus 25.svg">
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+                <div class="question_item">
+                    <p>Как подготовиться к процедуре?</p>
+                    <img class="plus" src="img/Group 25.svg">
+                    <img class="minus" src="img/Minus 25.svg">
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+                <div class="question_item">
+                    <p>Имеет ли электроэпиляция противопоказания?</p>
+                    <img class="plus" src="img/Group 25.svg">
+                    <img class="minus" src="img/Minus 25.svg">
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+                <div class="question_item">
+                    <p>Как ухаживать за кожей после процедуры?</p>
+                    <img class="plus" src="img/Group 25.svg">
+                    <img class="minus" src="img/Minus 25.svg">
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="questions_for_me">
+            <div class="about_me_item">
+                <div class="my_photo">
+                   <img src="img/Photo (7).png">
+                </div>
+                <div class="description">
+                    <h2>Остались вопросы? Напишите нам и мы свяжемся с вами!</h2>
+                    <div class="form">
+                        <p><input type="email" class="underline-input" placeholder="E-mail"></p>
+                        <p><input type="text" class="underline-input" placeholder="Сообщение"></p>
+                    </div>
+                    <button class="but dark">Написать</button>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer_info" id="section4">
+            <div class="contacts">
+                <h2>Контакты</h2>
+                    <div class="adress">
+                        <h4>Адрес:</h4>
+                        <p>Краков, ул. ХХХХХXXXXХ</p>
+                        <p>31-302</p>
+                    </div>
+                    <div class="number">
+                        <h3>Телефон:</h3>
+                        <p>+48 538 998 215</p>
+                        <p>+38 096 753 64 72</p>
+                    </div>
+                    <div class="social">
+                      <img src="img/Group 100.svg">
+                      <img src="img/Group 98.svg">
+                      <img src="img/Group 99.svg">
+                    </div>
+            </div>
+        </div>
+        
+        <div class="footer_down">
+            <div class="footer_bottom container">
+                <div class="logo_name">
+                    <p>Epil Studio</p>
+                </div>
+                <div class="rules">
+                    <p>ⓒ 2022 Все права защищены</p>
+                </div>
+                <div class="Privacy Policy">
+                    <p>Политика Конфиденциальности</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
