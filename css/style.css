@@ -327,7 +327,7 @@ p{
 }
 
 /* Why us Media Style */
-@media only screen and (max-width: 1050px){
+@media only screen and (max-width: 1298px){
     .why_us_item{
         text-align: center;
     }
