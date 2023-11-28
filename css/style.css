@@ -400,7 +400,7 @@ p{
     display: flex;
 }
 /* Certeficate Mobile Style */
-@media only screen and (max-width: 1050px){
+@media only screen and (max-width: 1290px){
     .certificate{
         flex-direction: column; /* Изменяем направление флекс-контейнера обратно на горизонтальное */
         overflow: hidden; /* Скрываем остальные картинки, которые не помещаются в контейнер */
